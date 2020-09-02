@@ -7,7 +7,9 @@ const Index = () => {
         <div>
             {loading ? <div>Loading...</div> : null}
             {error ? <div>error</div> : null}
-            {!data ? <div>please select missio9n</div> : null}
+            {!data ? <div>please select mission</div> : null}
+
+            <launchD respData={data} />
         </div>
     )
 }
