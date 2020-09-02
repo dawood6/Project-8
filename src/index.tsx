@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { gql, ApolloProvider, InMemoryCache, ApolloClient } from '@apollo/client'
+import { ApolloProvider, InMemoryCache, ApolloClient } from '@apollo/client'
 import * as serviceWorker from './serviceWorker';
 
 const Client = new ApolloClient({

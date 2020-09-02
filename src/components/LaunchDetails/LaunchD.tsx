@@ -28,7 +28,7 @@ const LaunchD: React.FC<Props> = ({ data }) => {
                 </p>
                 {!!data.launch?.links && !!data.launch.links.flickr_images && (
                     <div>
-                        {data.launch.links.flickr_images.map(image => image ? <img src={image} /> : null)}
+                        {data.launch.links.flickr_images.map(image => image ? <img src={image} alt='' /> : null)}
                     </div>
                 )}
             </div>
