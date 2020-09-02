@@ -1,15 +1,17 @@
 import React from 'react'
 import Index1 from './components/Launch/Index'
 import Index2 from './components/LaunchDetails/Index'
-import LaunchD from './components/LaunchDetails/LaunchD'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>
-      <Index1 />
-      <Index2 />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Index1 />} >
+          <Route path=':index' element={<Index2 />} />
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 

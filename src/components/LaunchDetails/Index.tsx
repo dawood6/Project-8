@@ -1,8 +1,12 @@
 import React from 'react'
 import { useLaunchInfoQuery } from '../../generated/graphql'
 import LaunchD from './LaunchD'
+import { useParams } from 'react-router-dom'
+import Launch from '../Launch/Launch'
+
 const Index2 = () => {
-    const { data, error, loading } = useLaunchInfoQuery({ variables: { id: "13" } })
+    const { index } = useParams()
+    const { data, error, loading } = useLaunchInfoQuery({ variables: { id: index } })
     if (loading) {
         return <div>loading...</div>
     }
@@ -10,6 +14,8 @@ const Index2 = () => {
         console.log(error);
         return <div>error</div>
     }
+
+
     return <LaunchD data={data} />
 
 }
