@@ -1,16 +1,16 @@
 import React from 'react'
-import { useLaunchesQuery } from "../../generated/graphql"
+import { useLaunchesQuery } from '../../generated/graphql'
 import Launch from './Launch'
-const Index = () => {
-    const { data, error, loading } = useLaunchesQuery();
+const Index1 = () => {
+    const { data, loading, error } = useLaunchesQuery()
+    if (loading) {
+        return <div>loading....</div>
+    }
+    if (error || !data) {
+        return <div>error</div>
+    }
 
-    return (
-        <div>
-            {loading ? <div>Loading...</div> : null}
-            {error || !data ? <div>error</div> : null}
-            <Launch respData={data} />
-        </div>
-    )
+    return <Launch data={data} />
 }
 
-export default Index
+export default Index1

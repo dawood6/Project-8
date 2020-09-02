@@ -1,17 +1,17 @@
 import React from 'react'
 import { useLaunchInfoQuery } from '../../generated/graphql'
-import launchD from './LaunchD'
-const Index = () => {
+import LaunchD from './LaunchD'
+const Index2 = () => {
     const { data, error, loading } = useLaunchInfoQuery({ variables: { id: "13" } })
-    return (
-        <div>
-            {loading ? <div>Loading...</div> : null}
-            {error ? <div>error</div> : null}
-            {!data ? <div>please select mission</div> : null}
+    if (loading) {
+        return <div>loading...</div>
+    }
+    if (error || !data) {
+        console.log(error);
+        return <div>error</div>
+    }
+    return <LaunchD data={data} />
 
-            <launchD respData={data} />
-        </div>
-    )
 }
 
-export default Index
+export default Index2

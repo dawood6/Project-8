@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const LAUNCH_D_QUERY = gql`
+export const QUERY_LAUNCH_DETAILS = gql`
 query launchInfo($id: String) {
     launch(id: $id) {
      flight_number
@@ -22,4 +22,3 @@ query launchInfo($id: String) {
    }
  }`;
 
-module.exports(LAUNCH_D_QUERY)

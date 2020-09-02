@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const LAUNCH_QUERY = gql`
+export const QUERY_LAUNCH = gql`
 query launches {
     launches {
       flight_number
@@ -10,4 +10,3 @@ query launches {
     }
   }`;
 
-module.exports(LAUNCH_QUERY)

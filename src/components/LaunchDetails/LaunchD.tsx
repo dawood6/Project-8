@@ -2,16 +2,30 @@ import React from 'react'
 import { LaunchInfoQuery } from '../../generated/graphql'
 
 interface Props {
-    respData: LaunchInfoQuery
+    data: LaunchInfoQuery
 }
-const LaunchD: React.FC<Props> = ({ respData }) => {
+const LaunchD: React.FC<Props> = ({ data }) => {
     return (
         <div>
-            {!respData.launch ? <div>launch 404</div> : null}
+            {!data.launch ? <div>launch 404</div> : null}
             <div>
                 <div>
-                    <span>Flight {respData.launch?.flight_number}</span>
+                    <span>Flight {data.launch?.flight_number}</span>
                 </div>
+                <h1>
+                    {data.launch?.mission_name} - {data.launch?.rocket?.rocket_name}
+                </h1>
+                <p>
+                    Launced From
+                    {data.launch?.launch_site?.site_name}
+
+                    in
+
+                    {data.launch?.launch_year}
+                </p>
+                <p>
+                    {data.launch?.details}
+                </p>
             </div>
         </div>
     )
