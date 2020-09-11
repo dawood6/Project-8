@@ -6,7 +6,7 @@ interface Props {
 }
 const LaunchD: React.FC<Props> = ({ data }) => {
     return (
-        <div>
+        <div className='con'>
             {!data.launch ? <div>launch 404</div> : null}
             <div>
                 <div>

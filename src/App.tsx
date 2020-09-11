@@ -1,11 +1,13 @@
 import React from 'react'
 import Index1 from './components/Launch/Index'
 import Index2 from './components/LaunchDetails/Index'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom'
 import FontAwesome from 'react-fontawesome'
 import './App.css'
 import Home from './components/Home';
+import Launch from './components/Launch'
 const App = () => {
+
   return (
     <>
       <Router>
@@ -16,7 +18,8 @@ const App = () => {
         </ul>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/Launch' element={<Index1 />} >
+          <Route path='Launch' element={<Launch />} >
+            <Route path='/' element={<Index1 />} />
             <Route path=':index' element={<Index2 />} />
           </Route>
         </Routes>
