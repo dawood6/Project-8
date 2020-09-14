@@ -1,9 +1,10 @@
 import React from 'react'
 import { LaunchInfoQuery } from '../../generated/graphql'
-
+import './styles.css'
 interface Props {
     data: LaunchInfoQuery
 }
+
 const LaunchD: React.FC<Props> = ({ data }) => {
     return (
         <div className='con'>
@@ -28,7 +29,7 @@ const LaunchD: React.FC<Props> = ({ data }) => {
                 </p>
                 {!!data.launch?.links && !!data.launch.links.flickr_images && (
                     <div>
-                        {data.launch.links.flickr_images.map(image => image ? <img src={image} alt='' /> : null)}
+                        {data.launch.links.flickr_images.map(image => image ? <img className='rocket-images' src={image} alt='' /> : null)}
                     </div>
                 )}
             </div>

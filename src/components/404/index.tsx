@@ -2,11 +2,9 @@ import React from 'react'
 import './styles.css'
 const NotFound = () => {
     return (
-        <div className='notcon'>
-            <div className="static">
-                <div></div>
-            </div>
-            <div className="scan"></div>
+        <div className='con'>
+            <h1 className='noth1'>404</h1>
+            <p className='notp'>Mission Details Not Found Please Select Another Mission</p>
         </div>
     )
 }

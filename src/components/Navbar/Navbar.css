@@ -1,0 +1,47 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navli {
+    display: inline-block;
+    padding: 6px;
+    margin: 10px;
+    font-size: 20px;
+    list-style-type: none;
+    border-radius: 4px;
+    transition: 1s;
+}
+.navli a {
+    color: white;
+    text-decoration: none;
+}
+.socialli {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    margin: 6px;
+    border: 1px solid white;
+    border-radius: 100px;
+    width: 40px;
+}
+
+.sociala {
+    color: white;
+    text-decoration: none;
+}
+
+.sociala:hover {
+    color: dodgerblue;
+}
+
+.socialli:hover {
+    background-color: white;
+    transition: 1s;
+}
+
+.navlogo {
+    margin-top: -60px;
+    width: 200px;
+}

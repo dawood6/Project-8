@@ -1,0 +1,31 @@
+.rocket-images {
+    width: 100px;
+}
+
+.rocket-images:nth-child(3) {
+    display: none;
+}
+.rocket-images:nth-child(4) {
+    display: none;
+}
+.rocket-images:nth-child(5) {
+    display: none;
+}
+.rocket-images:nth-child(6) {
+    display: none;
+}
+.rocket-images:nth-child(7) {
+    display: none;
+}
+.rocket-images:nth-child(8) {
+    display: none;
+}
+.rocket-images:nth-child(9) {
+    display: none;
+}
+.rocket-images:nth-child(10) {
+    display: none;
+}
+.rocket-images:nth-child(11) {
+    display: none;
+}
