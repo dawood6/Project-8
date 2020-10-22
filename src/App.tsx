@@ -6,7 +6,6 @@ import './App.css'
 import Home from './components/Home';
 import Launch from './components/Launch'
 import Navbar from './components/Navbar/Navbar'
-import Loader from './components/Loader'
 const App = () => {
 
   return (

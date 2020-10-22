@@ -3,7 +3,7 @@ import './styles.css'
 const Footer = () => {
     return (
         <div className='footer'>
-            Made With ❤️ By Dawood Sadiq
+            Made With <span role='img' aria-label=''>❤️</span> By Dawood Sadiq
         </div>
     )
 }

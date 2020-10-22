@@ -1,6 +1,5 @@
 import React from 'react'
 import './loading.css'
-import FontAwesome from 'react-fontawesome'
 const Loader = () => {
     return (
         <div >

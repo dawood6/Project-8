@@ -1,25 +1,33 @@
-import { NOTFOUND } from 'dns'
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { LaunchInfoQuery } from '../../generated/graphql'
-import NotFound from '../404'
 import './styles.css'
+import logo from '../../images/bg.jpg'
 interface Props {
     data: LaunchInfoQuery
 }
 
 const LaunchD: React.FC<Props> = ({ data }) => {
+    console.log()
+    if (data.launch.links.flickr_images.length === 0) {
+        console.log("hello")
+    }
     return (
         <div className='conDetails'>
             <div className="card">
                 <figure>
-                    {!!data.launch?.links && !!data.launch.links.flickr_images && (
-                        <>
-                            {data.launch.links.flickr_images.map((image, i) =>
-                                image
-                                    ? <img className='rocket-images' src={image} key={i} alt='' />
-                                    : "Image Not Found")}
-                        </>
-                    )}
+                    {data.launch.links.flickr_images.length !== 0
+                        ? (
+                            <>
+                                {data.launch.links.flickr_images.map((image, i) => <img className='rocket-images' src={image} key={i} alt='' />)}
+                            </>
+                        )
+                        : (
+                            <>
+                                <img src={logo} alt='' />
+                            </>
+                        )
+                    }
                 </figure>
                 <section className="details">
                     <div className="min-details">
@@ -37,7 +45,7 @@ const LaunchD: React.FC<Props> = ({ data }) => {
                             </p>
                         </div>
                         <div className="options-colors">
-                            <button className='btn btn-launchD'><a href="#popup1">Want More Detals...</a></button>
+                            <button className='btn btn-launchD'><a href="#popup1 ">Want More Detals...</a></button>
                         </div>
                     </div>
                 </section>

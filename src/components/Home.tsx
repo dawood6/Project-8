@@ -2,7 +2,6 @@ import React from 'react'
 import './Home.css'
 import rocket from '../images/undraw_Outer_space_drqu.png'
 import { Link } from 'react-scroll'
-import Cards from './Cards/Cards'
 import Footer from './Footer'
 
 const Home = () => {
