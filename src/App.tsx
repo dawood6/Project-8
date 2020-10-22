@@ -9,7 +9,7 @@ import Navbar from './components/Navbar/Navbar'
 const App = () => {
 
   return (
-    <>
+    <div>
       <Router>
         <Navbar />
         <Routes>
@@ -20,7 +20,7 @@ const App = () => {
           </Route>
         </Routes>
       </Router>
-    </>
+    </div>
   )
 }
 

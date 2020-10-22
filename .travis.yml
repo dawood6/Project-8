@@ -6,13 +6,12 @@ node_js:
 #     - node_modules
 script:
   - yarn install
-  - yarn test
   - yarn run build
   
 deploy:
   provider: surge
   skip_cleanup: true
-  domain: spaceX-dawood.surge.sh
+  domain: spacex-dawood.surge.sh
   project: ./build/
 on:
   branch: master
