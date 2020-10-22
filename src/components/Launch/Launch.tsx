@@ -10,10 +10,10 @@ const Launch: React.FC<Props> = ({ data }) => {
         <div >
             <div className="main">
                 <h1>Launches</h1>
-                <ul className="cards">
+                <ul className="cards-laucnh">
                     {data.launches && data.launches.map((launches, index) => !!launches && (
                         <li key={index} className="cards_item">
-                            <div className="card">
+                            <div className="cards-laucnh">
                                 <div className="card_content">
                                     <h2 className="card_title">{launches.mission_name}t</h2>
                                     <p className="card_text">Launch Year:  {launches.launch_year} Launh Sucess: ({JSON.stringify(launches.launch_success)})</p>
