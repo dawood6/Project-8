@@ -56,7 +56,7 @@ const LaunchD: React.FC<Props> = ({ data }) => {
                     <a className="close" href="#">×</a>
                     <div className="content">
                         {
-                            (data.launch?.details === "")
+                            (data.launch?.details !== "")
                                 ? data.launch?.details
                                 : "Data Not Found"
                         }
